@@ -1,20 +1,41 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Print("Enter a number: ")
-	var input float64
-	fmt.Scanf("%f", &input)
-	output := input + 2
-	fmt.Println(output)
 
 	for i := 1; i < 100; i++ {
 		if i%3 == 0 {
 			fmt.Printf("%d ", i)
 		}
 	}
-	FizzBuzz(100)
+
+	var x [5]int
+	for i := 0; i < len(x); i++ {
+		x[i] = i + 1
+	}
+	var total = 0
+	for _, v := range x {
+		total += v
+	}
+
+	slice1 := []int{1, 2, 3}
+	slice2 := append(slice1, 4, 5)
+	fmt.Println(slice1, slice2)
+	fmt.Println(cap(slice2))
+
+	elements := make(map[string]string)
+
+	elements["H"] = "Hydrogen"
+	elements["He"] = "Helium"
+	elements["Li"] = "Lithium"
+	elements["Be"] = "Berylium"
+	elements["B"] = "Boron"
+	elements["C"] = "Carbon"
+	elements["N"] = "Nitrogen"
+	elements["O"] = "Oxygen"
+	elements["F"] = "Flourine"
+	elements["Ne"] = "Neon"
+	fmt.Println(elements["He"])
+
 }
