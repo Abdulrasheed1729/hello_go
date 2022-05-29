@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//
 func myMaps() {
 	elements := map[string]map[string]string{
 		"H": {
@@ -49,6 +50,6 @@ func myMaps() {
 	fmt.Println(elements["He"])
 
 	if el, ok := elements["Ne"]; ok {
-		fmt.Println(el, ok)
+		fmt.Println(el["name"], el["state"])
 	}
 }

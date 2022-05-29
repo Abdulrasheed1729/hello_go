@@ -23,7 +23,8 @@ func main() {
 	slice2 := append(slice1, 4, 5)
 	fmt.Println(slice1, slice2)
 	fmt.Println(cap(slice2))
-	FizzBuzz(10)
+	mySlice := make([]int, 3, 9)
+	fmt.Println(len(mySlice))
+	fmt.Println(cap(mySlice))
 
-	myMaps()
 }
