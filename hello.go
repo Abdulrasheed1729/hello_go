@@ -24,18 +24,5 @@ func main() {
 	fmt.Println(slice1, slice2)
 	fmt.Println(cap(slice2))
 
-	elements := make(map[string]string)
-
-	elements["H"] = "Hydrogen"
-	elements["He"] = "Helium"
-	elements["Li"] = "Lithium"
-	elements["Be"] = "Berylium"
-	elements["B"] = "Boron"
-	elements["C"] = "Carbon"
-	elements["N"] = "Nitrogen"
-	elements["O"] = "Oxygen"
-	elements["F"] = "Flourine"
-	elements["Ne"] = "Neon"
-	fmt.Println(elements["He"])
-
+	maps()
 }
