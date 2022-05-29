@@ -23,6 +23,7 @@ func main() {
 	slice2 := append(slice1, 4, 5)
 	fmt.Println(slice1, slice2)
 	fmt.Println(cap(slice2))
+	FizzBuzz(10)
 
-	maps()
+	myMaps()
 }

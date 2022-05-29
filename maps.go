@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func maps() {
+func myMaps() {
 	elements := map[string]map[string]string{
 		"H": {
 			"name":  "Hydrogen",
@@ -48,7 +48,7 @@ func maps() {
 
 	fmt.Println(elements["He"])
 
-	if name, ok := elements["Ne"]; ok {
-		fmt.Println(name, ok)
+	if el, ok := elements["Ne"]; ok {
+		fmt.Println(el, ok)
 	}
 }
