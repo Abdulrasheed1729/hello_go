@@ -3,28 +3,26 @@ package main
 import "fmt"
 
 func main() {
-
-	for i := 1; i < 100; i++ {
-		if i%3 == 0 {
-			fmt.Printf("%d ", i)
-		}
+	xs := []float64{98, 93, 77, 82, 83}
+	fmt.Println(average(xs))
+	fmt.Println(add(xs...))
+	x := 0
+	increment := func() int {
+		x++
+		return x
 	}
+	fmt.Println(increment())
+	fmt.Println(increment())
 
-	var x [5]int
-	for i := 0; i < len(x); i++ {
-		x[i] = i + 1
-	}
-	var total = 0
-	for _, v := range x {
-		total += v
-	}
+	nextEven := makeEvenGenerator()
+	fmt.Println(nextEven())
+	fmt.Println(nextEven())
+	fmt.Println(nextEven())
 
-	slice1 := []int{1, 2, 3}
-	slice2 := append(slice1, 4, 5)
-	fmt.Println(slice1, slice2)
-	fmt.Println(cap(slice2))
-	mySlice := make([]int, 3, 9)
-	fmt.Println(len(mySlice))
-	fmt.Println(cap(mySlice))
+	nextOdd := makeOddGenerator()
+	fmt.Println(nextOdd())
+	fmt.Println(nextOdd())
+	fmt.Println(nextOdd())
+	fmt.Println(factorial(5))
 
 }
