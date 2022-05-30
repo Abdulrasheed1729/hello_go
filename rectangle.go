@@ -17,3 +17,9 @@ func (r *Rectangle) area() float64 {
 	w := distance(r.x1, r.y1, r.x2, r.y1)
 	return l * w
 }
+
+func (r *Rectangle) perimeter() float64 {
+	l := distance(r.x1, r.y1, r.x1, r.y2)
+	w := distance(r.x1, r.y1, r.x2, r.y1)
+	return 2 * (l + w)
+}
